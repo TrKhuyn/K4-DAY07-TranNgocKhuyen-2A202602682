@@ -108,12 +108,12 @@ Chạy **5 câu hỏi đánh giá của nhóm** trên mã nguồn cá nhân củ
 | 2 | Nguyên tắc ưu tiên khi mở các lớp học lại là gì? | chuan-dau-ra-av (không liên quan) | 0.2019 | Không | Context không có điều kiện 5 sinh viên; agent phải từ chối. |
 | 3 | Ngành CNKT Điện, điện tử được chia thành những chuyên ngành nào? | lop-dau-khoa (không liên quan) | 0.3752 | Không | Context không có hai chuyên ngành gold; agent phải từ chối. |
 | 4 | Khi đăng ký học lại trên qldt, SV nhập gì vào ô Môn học? | tuvan-khoa23 (không liên quan) | 0.2970 | Không | Context không có “Mã môn”; agent phải từ chối. |
-| 5 | Buổi tư vấn chọn chuyên ngành diễn ra ở phòng nào và lúc mấy giờ? | hoc-bong (không liên quan) | 0.2875 | Không | Đã filter `audience=student`, nhưng mock vẫn không trả gold chunk. |
+| 5 | Buổi tư vấn chọn chuyên ngành diễn ra ở phòng nào và lúc mấy giờ? | hoc-bong (không liên quan) | 0.2875 | Không | Baseline mock không trả gold chunk; kết quả semantic/A-B chính thức dùng số liệu tổng hợp của nhóm. |
 
-**Bao nhiêu câu hỏi trả về chunk có liên quan trong top-3?** 0 / 5 với `_mock_embed`; xem `report/ket_qua_benchmark_khuyen.txt`.
+**Bao nhiêu câu hỏi trả về chunk có liên quan trong top-3?** 0 / 5 với `_mock_embed`; xem `ket_qua_benchmark.txt`. Đây chỉ là baseline cục bộ, không dùng để so sánh score với lần chạy semantic tổng hợp của nhóm.
 
 **Điều hay nhất tôi học được từ thành viên khác / nhóm khác (qua demo):**
-> Metadata chỉ hữu ích nếu tách dữ liệu theo đúng chiều cần phân biệt; ví dụ audience=student có thể loại tài liệu tuvan-khoa23 gắn audience=faculty. Tôi cũng học được rằng phải làm sạch output crawl và dùng semantic embedder trước khi đánh giá retrieval, vì mock embedding không có ý nghĩa ngữ nghĩa.
+> Metadata chỉ hữu ích nếu tách dữ liệu theo đúng chiều cần phân biệt. Tôi phân biệt rõ baseline `_mock_embed` cục bộ với kết quả semantic/A-B do nhóm tổng hợp, vì hai cấu hình không thể dùng chung để kết luận hiệu quả filter. Tôi cũng học được rằng phải làm sạch output crawl và dùng semantic embedder trước khi đánh giá retrieval, vì mock embedding không có ý nghĩa ngữ nghĩa.
 
 ---
 
