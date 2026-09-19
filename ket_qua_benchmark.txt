@@ -1,0 +1,30 @@
+Command: python bench.py --strategy sentence
+Embedding backend: mock (MD5-derived vectors; scores are not semantic quality evidence)
+Chunks loaded: 51
+
+Q1 Hạn cuối đăng ký nguyện vọng học lại
+1. lop-dau-khoa 0.3661 gold_text=False
+2. mien-thi-av 0.2714 gold_text=False
+3. hoc-bong 0.2167 gold_text=False
+
+Q2 Nguyên tắc ưu tiên mở lớp học lại
+1. chuan-dau-ra-av 0.2019 gold_text=False
+2. hoc-lai 0.1818 gold_text=False
+3. hoc-bong 0.1753 gold_text=False
+
+Q3 Chuyên ngành CNKT Điện, điện tử
+1. lop-dau-khoa 0.3752 gold_text=False
+2. hoc-bong 0.3017 gold_text=False
+3. hoc-bong 0.2464 gold_text=False
+
+Q4 Nhập gì vào ô Môn học trên qldt
+1. tuvan-khoa23 0.2970 gold_text=False
+2. hoc-bong 0.2717 gold_text=False
+3. faculty-appointment 0.1736 gold_text=False
+
+Q5 Phòng và giờ tư vấn chuyên ngành, filter audience=student
+1. hoc-bong 0.2875 gold_text=False
+2. lop-dau-khoa 0.2674 gold_text=False
+3. hoc-bong 0.2507 gold_text=False
+
+Conclusion: no gold answer text appears in top-3 with MockEmbedder. This is the documented failure case; rerun with a semantic embedder before scoring retrieval quality.
